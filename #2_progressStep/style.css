@@ -1,0 +1,131 @@
+:root {
+  --blue-primary-color: #589dc7;
+  --gray-color: #eee;
+}
+
+html {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+input {
+  line-height: normal;
+}
+label,
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 400px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.progress-container::before {
+  content: "";
+  background-color: var(--gray-color);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 5px;
+  width: 100%;
+  z-index: -1;
+}
+
+#progress {
+  background-color: var(--blue-primary-color);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 3px;
+  width: 0%;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.step {
+  background-color: #fff;
+  color: #333;
+  width: 40px;
+  height: 40px;
+  border-radius: 50rem;
+  border: 4px solid var(--gray-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.25s ease-in-out;
+}
+
+.step.active {
+  transition: all 0.35s 0.2s ease-in-out;
+
+  border: 4px solid var(--blue-primary-color);
+}
+
+.btn-group {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background-color: var(--blue-primary-color);
+  border: none;
+  color: #fff;
+  transition: all 0.25s ease-in-out;
+  transform: scale(1);
+}
+
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn:focus {
+  transform: scale(0.97);
+}
+
+.btn[disabled] {
+  background-color: var(--gray-color);
+}
