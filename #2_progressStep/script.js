@@ -8,15 +8,12 @@ let widthPerStep = 100 / (steps.length - 1);
 
 updateProgress(currentIndex, widthPerStep);
 
-// nextBtn.addEventListener('click', () => {
-//     currentIndex++;
-//     updateProgress(currentIndex, widthPerStep);
-//     activeStep();
-// });
+// Events
 nextBtn.addEventListener('click', handleProgressEvents.bind(nextBtn));
-
 prevBtn.addEventListener('click', handleProgressEvents.bind(prevBtn));
 
+
+// Functions
 function handleProgressEvents() {
     const typeEvent = this.innerText.toLowerCase();
     switch(typeEvent){
