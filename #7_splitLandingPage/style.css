@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-size: 16px;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+.box {
+  transition: all 0.5s linear;
+  flex: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.box-left {
+  background-position: center center;
+  background-image: url("https://bizweb.dktcdn.net/100/372/934/articles/header-cd8ead94-cc42-475f-918c-10cfc079769f.jpg?v=1600180054487");
+}
+
+.box-left:before {
+  background-color: rgba(119, 125, 233, 0.7);
+}
+
+.box-right {
+  background-position: center left;
+  background-image: url("https://i.ytimg.com/vi/0tUqIHwHDEc/maxresdefault.jpg");
+}
+
+.box:hover {
+  flex: 3;
+}
+
+.box:hover .box__content {
+  transform: scale(1.1);
+}
+
+.box__content {
+  transition: all 0.5s linear;
+
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+h2.box__title {
+  font-size: 3.5rem;
+  color: #fff;
+  font-weight: 900;
+  text-transform: capitalize;
+  margin-bottom: 50px;
+  transition: all 0.25s ease-in-out;
+}
+
+.btn {
+  padding: 15px 25px;
+  min-width: 200px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  transition: all 0.25s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #333;
+}
